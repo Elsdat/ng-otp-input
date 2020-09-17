@@ -85,7 +85,11 @@ export class NgOtpInputComponent implements OnInit, AfterViewInit {
   onKeyUp($event, inputIdx) {
     const nextInputId = this.appendKey(`otp_${inputIdx + 1}`);
     const prevInputId = this.appendKey(`otp_${inputIdx - 1}`);
+    console.log($event.target)
+    $event.target.setAttribute('style', "background: url('/assets/fill-6-copy-3.svg') center  no-repeat; color: transparent; caret-color: #000;")
+
     if (this.ifRightArrow($event)) {
+
       this.setSelected(nextInputId);
       return;
     }
@@ -95,6 +99,7 @@ export class NgOtpInputComponent implements OnInit, AfterViewInit {
     }
     const isBackspace = this.ifBackspaceOrDelete($event);
     if (isBackspace && !$event.target.value) {
+      $event.target.removeAttribute('style')
       this.setSelected(prevInputId);
       this.rebuildValue();
       return;

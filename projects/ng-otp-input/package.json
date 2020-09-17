@@ -1,5 +1,5 @@
 {
-  "name": "ng-otp-input",
+  "name": "vapulus-otp-input",
   "version": "1.7.1",
   "description": "A fully customizable, one-time password input component for the web built with Angular.",
   "author": {"name": "jitender"},

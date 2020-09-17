@@ -170,5 +170,8 @@
       }
     }
   },
-  "defaultProject": "ng-otp-input"
+  "defaultProject": "ng-otp-input",
+  "cli": {
+    "analytics": "2c2a3546-75cc-4c85-acd1-38e6bbee8cf9"
+  }
 }
